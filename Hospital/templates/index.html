@@ -1,0 +1,59 @@
+{% extends 'homebase.html' %}
+{% load static %}
+
+{% block content %}
+<head>
+  <style>
+    .jumbotron {
+      background-image: url('{% static "images/bg.jpg" %}');
+      background-size: cover;
+      background-repeat: no-repeat;
+      padding: 100px 0;
+      text-align: center;
+    }
+
+    .jumbotron h5 {
+      font-size: 40px;
+      color: #fff;
+    }
+
+    .jumbotron h3 {
+      font-size: 24px;
+      color: #fff;
+    }
+
+    .alert {
+      margin: 0;
+    }
+
+    .glow {
+      font-size: 50px;
+      color: #fff;
+      text-align: center;
+      animation: glow 1s ease-in-out infinite alternate;
+    }
+
+    @keyframes glow {
+      from {
+        text-shadow: 0 0 10px #eeeeee, 0 0 20px #000000, 0 0 30px #000000, 0 0 40px #000000, 0 0 50px #9554b3, 0 0 60px #9554b3, 0 0 70px #9554b3;
+      }
+      to {
+        text-shadow: 0 0 20px #eeeeee, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+      }
+    }
+  </style>
+</head>
+
+<div class="jumbotron">
+  <h5 class="display-3 glow">El camino hacia una vida más saludable comienza aquí</h5>
+  <br> <br>
+
+  <p>¿TE SIENTES MAL?, AGENDA TU CITA SERA UN GUSTO PODER ATENDERTE </p>
+  <p class="lead">
+    <a class="btn btn-primary btn-lg" href="/patientclick" role="button">Tomar cita</a>
+  </p>
+</div>
+
+{% include "admin_doctor_patient_card.html" %}
+
+{% endblock content %}

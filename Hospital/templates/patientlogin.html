@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+{% load widget_tweaks %}
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Clinica Medica</title>
+
+
+  <style type="text/css">
+    body {
+      color: #aa082e;
+      background-color: #b6bde7;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    a:link {
+      text-decoration: none;
+    }
+
+    .note {
+      text-align: center;
+      height: 80px;
+      background: -webkit-linear-gradient(left, #eeff00, #68c511);
+      color: #fff;
+      font-weight: bold;
+      line-height: 80px;
+    }
+
+    .form-content {
+      padding: 5%;
+      border: 1px solid #ced4da;
+      margin-bottom: 2%;
+    }
+
+    .form-control {
+      border-radius: 1.5rem;
+    }
+
+    .btnSubmit {
+      border: none;
+      border-radius: 1.5rem;
+      padding: 1%;
+      width: 20%;
+      cursor: pointer;
+      background: #adcc00;
+      color: #fff;
+    }
+  </style>
+
+</head>
+
+<body>
+  {% include "navbar.html" %}
+  <br>
+  <br>
+  <br><br>
+
+  <!--- página de inicio de sesión para paciente por administrador (sumit)  ---------->
+  <form method="post">
+    {% csrf_token %}
+    <div class="container register-form">
+      <div class="form">
+        <div class="note">
+          <p>Página de inicio de sesión del paciente</p>
+        </div>
+
+        <div class="form-content">
+          <div class="row">
+            <div class="col-md-6">
+
+              <div class="form-group">
+                {% render_field form.username class="form-control" placeholder="Usuario" %}
+              </div>
+
+            </div>
+            <div class="col-md-6">
+
+              <div class="form-group">
+                {% render_field form.password class="form-control" placeholder="Contraseña" %}
+              </div>
+
+            </div>
+          </div>
+          <button type="submit" class="btnSubmit">Acceso</button>
+          <div class="text-center">¿No tienes cuenta? <a href="patientsignup">Registrate aquí</a></div>
+        </div>
+      </div>
+    </div>
+
+  </form>
+
+  <br><br><br>
+
+
+  {% include "footer.html" %}
+</body>
+
+</html>

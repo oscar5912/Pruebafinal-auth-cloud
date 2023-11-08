@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Clinica medica</title>
+  <style media="screen">
+    .jumbotron {
+      margin-top: 0px;
+      margin-bottom: 0px;
+    }
+s
+    .jumbotron h1 {
+      text-align: center;
+    }
+
+    .alert {
+      margin: 0px;
+    }
+  </style>
+  <title>Aceptar</title>
+</head>
+
+<body>
+  {% include "navbar.html" %}
+  <br><br>
+  <center>
+    <h3 class='alert alert-success' style="margin-bottom:0px;">Quiénes somos</h3>
+  </center>
+  <div class="jumbotron" style="margin-bottom: 0px;margin-top: 0px;">
+    <h1 class="display-4">Nuestra Mision</h1>
+    <p class="lead">Proporcionar atención médica de calidad y compasión a nuestros pacientes. Nos comprometemos a promover la salud, prevenir enfermedades y brindar tratamiento excepcional a individuos y familias. Valoramos la ética, la integridad y el respeto en todas nuestras interacciones. Nos esforzamos por ser líderes en innovación y cuidado médico personalizado. Nuestro objetivo es mejorar la vida de nuestros pacientes y de la comunidad a la que servimos."</p>
+    <hr class="my-4">
+    <p>Explore nuestro sitio web.</p>
+    <p class="lead">
+      <a class="btn btn-primary btn-lg" href="/" role="button">INICIO</a>
+    </p>
+  </div>
+  {% include "footer.html" %}
+</body>
+
+
+</html>

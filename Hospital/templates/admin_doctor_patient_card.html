@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .card {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      max-width: 300px;
+      margin: auto;
+      text-align: center;
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      border-radius: 10px;
+      padding: 20px;
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .title {
+      color: #333;
+      font-size: 18px;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background: -webkit-linear-gradient(left, #003cff, #11b9c5);
+      color: white;
+      text-decoration: none;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    .btn:hover {
+      background-color: #0056b3;
+    }
+
+    a {
+      text-decoration: none;
+      color: #007bff;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="grid-container">
+    <div class="grid-item">
+      <div class="card">
+        <img src="{% static "images/admin.png" %}" alt="Admin">
+        <p class="title">ADMIN</p>
+        <a class="btn" href="/adminclick">Ver</a>
+      </div>
+    </div>
+
+    <div class="grid-item">
+      <div class="card">
+        <img src="{% static "images/doctor.png" %}" alt="Doctor">
+        <p class="title">DOCTOR</p>
+        <a class="btn" href="/doctorclick">Ver</a>
+      </div>
+    </div>
+
+    <div class="grid-item">
+      <div class="card">
+        <img src="{% static "images/patient.jpg" %}" alt="Paciente">
+        <p class="title">PACIENTE</p>
+        <a class="btn" href="/patientclick">Ver</a>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

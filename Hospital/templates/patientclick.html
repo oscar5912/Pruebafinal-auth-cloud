@@ -1,0 +1,20 @@
+{% extends 'homebase.html' %}
+
+
+{% block content %}
+
+<br>
+<br>
+
+<div class="jumbotron" style="margin-bottom:0px;">
+  <h1 class="display-4" style="text-align:center;">Hola, Paciente</h1>
+  <p class="lead">Bienvenido al Sistema de la Clinica medica la eterna "Primavera".</p>
+  <hr class="my-4">
+  <p>Puede acceder a varias funciones después de iniciar sesión/registrarse.</p>
+  <p class="lead">
+    <a class="btn btn-primary btn-lg" href="/patientsignup" role="button">Registra tu cuenta</a>
+    <a class="btn btn-primary btn-lg" href="/patientlogin" role="button">iniciar sesion</a>
+  </p>
+</div>
+
+{% endblock content %}
